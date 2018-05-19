@@ -62,6 +62,11 @@
     "when": "editorTextFocus"
   },
   {
+    "key": "ctrl+n",
+    "command": "selectPrevSuggestion",
+    "when": "editorTextFocus && suggestWidgetVisible"
+  },
+  {
     "key": "ctrl+shift+n",
     "command": "cursorUpSelect",
     "when": "editorTextFocus"
@@ -92,6 +97,11 @@
     "when": "editorTextFocus"
   },
   {
+    "key": "ctrl+b",
+    "command": "selectNextSuggestion",
+    "when": "editorTextFocus && suggestWidgetVisible"
+  },
+  {
     "key": "ctrl+shift+b",
     "command": "cursorDownSelect",
     "when": "editorTextFocus"
@@ -114,6 +124,11 @@
   {
     "key": "ctrl+alt+t",
     "command": "cursorLineStart",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+[KeyB]",
+    "command": "editor.action.commentLine",
     "when": "editorTextFocus"
   }
 ]
