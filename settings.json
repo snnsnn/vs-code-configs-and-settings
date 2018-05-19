@@ -37,5 +37,5 @@
   "code-runner.clearPreviousOutput": true,
   "code-runner.runInTerminal": false,
   "code-runner.preserveFocus": true,
-  "code-runner.showExecutionMessage": false
+  "code-runner.showExecutionMessage": false,
 }
