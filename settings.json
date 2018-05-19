@@ -1,9 +1,8 @@
 {
   "window.zoomLevel": 0,
-  "editor.multiCursorModifier": "alt",
+  "editor.multiCursorModifier": "ctrlCmd",
   "editor.snippetSuggestions": "top",
   "editor.formatOnSave": false,
-  "rust.build_on_save": true,
   "[markdown]": {
     "editor.quickSuggestions": true
   },
@@ -34,5 +33,9 @@
   "update.channel": "none",
   "workbench.statusBar.visible": true,
   "workbench.colorTheme": "Monokai",
-  "code-runner.clearPreviousOutput": true
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.runInTerminal": false,
+  "code-runner.preserveFocus": true,
+  "code-runner.showExecutionMessage": false
 }
