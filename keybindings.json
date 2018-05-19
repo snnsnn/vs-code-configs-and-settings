@@ -1,0 +1,119 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "ctrl+[Backquote]",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "ctrl+[Backquote]",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "insertSnippet",
+    "when": "suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+alt+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+up",
+    "command": "editor.action.deleteLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "code-runner.run"
+  },
+  {
+    "key": "ctrl+alt+enter",
+    "command": "code-runner.stop"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "name": "add_paranthesis"
+    },
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+m",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "name": "add_curly_brackets"
+    },
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "name": "add_square_brackets"
+    },
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "cursorUp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "cursorUpSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "cursorColumnSelectUp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "cursorRight",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "cursorRightSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "cursorLineEnd",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "cursorDown",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "cursorDownSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+b",
+    "command": "cursorColumnSelectDown",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "cursorLeft",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "cursorLeftSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+t",
+    "command": "cursorLineStart",
+    "when": "editorTextFocus"
+  }
+]

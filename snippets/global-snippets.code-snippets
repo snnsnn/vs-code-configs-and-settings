@@ -1,0 +1,25 @@
+{
+	"add_paranthesis": {
+		"prefix": "$paranthesis",
+		"body": "(${TM_SELECTED_TEXT})$0",
+		"description": "replaces $paranthesis with ()"
+	},
+
+	"add_curly_brackets": {
+		"prefix": "$curly_brackets",
+		"body": "{${TM_SELECTED_TEXT}}$0",
+		"description": "replaces $curly_brackets with {}"
+	},
+	
+	"add_square_brackets": {
+		"prefix": "$square_brackets",
+		"body": "[${TM_SELECTED_TEXT}]$0",
+		"description": "replaces $square_brackets with []"
+  },
+
+  "wrap_in_backtick": {
+		"prefix": "$wrap_in_backtick",
+		"body": "`${TM_SELECTED_TEXT}`$0",
+		"description": "Wraps selected text in `"
+  }
+}

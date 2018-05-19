@@ -1,0 +1,36 @@
+{	
+	"Code markdown": {
+		"prefix": "code",
+		"body": [
+			"```",
+			"$1",
+			"```$0"
+		],
+		"description": "Outputs code block markdown"
+	},
+	"Inline Code Markdown": {
+		"prefix": "inline-code",
+		"body": [
+			"```$1``` $0"
+		],
+		"description": "Outputs code block markdown"
+	},
+	"Rust Code markdown": {
+		"prefix": "rust-code",
+		"body": [
+			"```rust",
+			"$1",
+			"```$0"
+		],
+		"description": "Outputs rust code block markdown"
+  },
+  "Javascript Code markdown": {
+		"prefix": "javascript-code",
+		"body": [
+			"```javascript",
+			"$1",
+			"```$0"
+		],
+		"description": "Outputs rust code block markdown"
+	}
+}

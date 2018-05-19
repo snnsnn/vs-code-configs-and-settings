@@ -1,0 +1,38 @@
+{
+  "window.zoomLevel": 0,
+  "editor.multiCursorModifier": "alt",
+  "editor.snippetSuggestions": "top",
+  "editor.formatOnSave": false,
+  "rust.build_on_save": true,
+  "[markdown]": {
+    "editor.quickSuggestions": true
+  },
+  "workbench.sideBar.location": "left",
+  "workbench.activityBar.visible": true,
+  "workbench.colorCustomizations": {
+    "[Monokai]": {
+      "input.background": "#000",
+      "editor.background": "#000",
+      "sideBar.background": "#000",
+      "activityBar.background": "#000",
+      "statusBar.background": "#000",
+      "titleBar.activeBackground": "#000",
+      "editorGroup.background": "#ff0000",
+      "editorGroupHeader.tabsBackground": "#000",
+      "tab.inactiveBackground": "#000",
+      "tab.activeBackground": "#000",
+      "dropdown.background": "#000",
+      "panel.background": "#000"
+    }
+  },
+  "editor.fontFamily": "'Fira Code', Purisa, 'PT Mono', 'Grand Hotel', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontSize": 18,
+  "editor.detectIndentation": false,
+  "editor.fontLigatures": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "update.channel": "none",
+  "workbench.statusBar.visible": true,
+  "workbench.colorTheme": "Monokai",
+  "code-runner.clearPreviousOutput": true
+}

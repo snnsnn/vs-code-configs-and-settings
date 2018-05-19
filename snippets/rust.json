@@ -1,0 +1,62 @@
+{
+	// Place your snippets for rust here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	"Print to console": {
+		"prefix": "println",
+		"body": [
+			"println!(\"${1:{\\}}\", $2);$0"
+		],
+		"description": "Print content to console"
+	},
+	"Print debug to console": {
+		"prefix": "println!",
+		"body": [
+			"println!(\"${1:{:#?\\}}\", $2);$0"
+		],
+		"description": "Print debug content to console"
+	},
+	"Add fn main": {
+		"prefix": "fn main linted",
+		"body": [
+			"#![allow(unused_variables)]",
+			"#![allow(dead_code)]",
+			"",
+			"fn main($1){",
+			"  $2",
+			"}$0"
+		],
+		"description": "Add fn main() with linting rules"
+	},
+	"Add fn main linted": {
+		"prefix": "fn main",
+		"body": [
+			"fn main($1){",
+			"  $2",
+			"}$0"
+		],
+		"description": "Add fn main()"
+	},
+	"#derive(Debug)": {
+		"prefix": "#derive(Debug)",
+		"body": [
+			"#[derive(Debug)]$0"
+		],
+		"description": "add derive(Debug) directive"
+	},
+	"Lint: allow dead_code": {
+		"prefix": "#allow(dead_code)",
+		"body": [
+			"#![allow(dead_code)]$0"
+		],
+		"description": "Allow dead_code lint"
+	},
+	"Lint: allow unused_variables": {
+		"prefix": "#allow(unused_variables)",
+		"body": [
+			"#![allow(unused_variables)]$0"
+		],
+		"description": "Allow unused_variables lint"
+	}
+}

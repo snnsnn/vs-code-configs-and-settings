@@ -1,0 +1,70 @@
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log($1);$0"
+		],
+		"description": "Log output to console"
+	},
+	
+	"Function expression": {
+		"prefix": "fn",
+		"body": [
+			"let ${1:name} = function($2){",
+			"  $3",
+			"};",
+		"$0",
+		],
+		"description": "Anonymous function expression"
+	},
+	
+	"Empty function statement": {
+		"prefix": "func",
+		"body": [
+			"function($2){",
+			"  $3",
+			"}$0",
+		],
+		"description": "Empty function statement"
+  },
+/*
+  "Import React": {
+		"prefix": "ir",
+		"body": [
+			"import React from 'react';"
+		],
+		"description": "import React from 'react';"
+  },
+
+  "Import ReactDOM": {
+		"prefix": "ird",
+		"body": [
+			"import ReactDOM from 'react-dom';"
+		],
+		"description": "import ReactDOM from 'react-dom';"
+  },
+
+  "import moduleName from 'module'": {
+		"prefix": "imp",
+		"body": [
+			"import $1 from '$2';$0"
+		],
+		"description": "import moduleName from 'module';"
+  },
+
+  "import { destructuredModule } from 'module'": {
+		"prefix": "impd",
+		"body": [
+			"import { $1 } from '$2';$0"
+		],
+		"description": "import { destructuredModule } from 'module';"
+  }
+  */
+
+}
