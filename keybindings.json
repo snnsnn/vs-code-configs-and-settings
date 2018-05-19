@@ -29,6 +29,11 @@
     "command": "code-runner.run"
   },
   {
+    "key": "ctrl+backspace",
+    "command": "deleteRight",
+    "when": "editorTextFocus"
+  },
+  {
     "key": "ctrl+alt+enter",
     "command": "code-runner.stop"
   },
