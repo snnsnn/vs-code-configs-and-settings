@@ -1,4 +1,4 @@
-{	
+{
 	"Code markdown": {
 		"prefix": "code",
 		"body": [
@@ -6,31 +6,40 @@
 			"$1",
 			"```$0"
 		],
-		"description": "Outputs code block markdown"
+		"description": "Adds code snippet"
 	},
 	"Inline Code Markdown": {
 		"prefix": "inline-code",
 		"body": [
-			"```$1``` $0"
+			"`$1` $0"
 		],
-		"description": "Outputs code block markdown"
+		"description": "Adds inline code snippet"
 	},
-	"Rust Code markdown": {
-		"prefix": "rust-code",
+	"php code": {
+		"prefix": "php",
+		"body": [
+			"```php",
+			"$1",
+			"```"
+		],
+		"description": "Adds php code snippet"
+	},
+	"rust code": {
+		"prefix": "rust",
 		"body": [
 			"```rust",
 			"$1",
-			"```$0"
+			"```"
 		],
-		"description": "Outputs rust code block markdown"
-  },
-  "Javascript Code markdown": {
-		"prefix": "javascript-code",
+		"description": "Adds rust code snippet"
+	},
+	"javascript code": {
+		"prefix": "javascript",
 		"body": [
 			"```javascript",
 			"$1",
-			"```$0"
+			"```"
 		],
-		"description": "Outputs rust code block markdown"
+		"description": "Adds javascript code snippet"
 	}
 }

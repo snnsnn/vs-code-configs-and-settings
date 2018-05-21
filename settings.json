@@ -1,10 +1,12 @@
 {
+  "php.validate.executablePath": "C:/MAMP/bin/php/php7.1.7/php.exe",
   "window.zoomLevel": 0,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.snippetSuggestions": "top",
   "editor.formatOnSave": false,
   "[markdown]": {
-    "editor.quickSuggestions": true
+    "editor.quickSuggestions": true,
+    "editor.wordWrap": "on"
   },
   "workbench.sideBar.location": "left",
   "workbench.activityBar.visible": true,
