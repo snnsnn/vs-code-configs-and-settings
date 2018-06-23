@@ -14,7 +14,8 @@
     "**/tmp/**": true
   },
   "[markdown]": {
-    "editor.quickSuggestions": true
+    "editor.quickSuggestions": true,
+    "editor.wordWrap": "on"
   },
   "workbench.sideBar.location": "left",
   "workbench.activityBar.visible": true,
@@ -49,8 +50,9 @@
   "editor.multiCursorModifier": "alt",
   "editor.snippetSuggestions": "top",
   "editor.tabSize": 2,
-  "workbench.statusBar.visible": true,
-  "workbench.colorTheme": "Monokai",
+  "php.validate.executablePath": "C:/MAMP/bin/php/php7.1.7/php.exe",
   "update.channel": "none",
   "window.zoomLevel": 0,
+  "workbench.statusBar.visible": true,
+  "workbench.colorTheme": "Monokai",
 }
