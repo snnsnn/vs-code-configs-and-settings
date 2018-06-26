@@ -38,6 +38,14 @@
     "command": "code-runner.stop"
   },
   {
+    "key": "ctrl+0",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "name": "add_fat_arrow"
+    },
+    "when": "editorTextFocus"
+  },
+  {
     "key": "ctrl+k",
     "command": "editor.action.insertSnippet",
     "args": {
@@ -54,10 +62,18 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+y",
+    "key": "ctrl+8",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "add_square_brackets"
+    },
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+7",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "name": "wrap_in_backtick"
     },
     "when": "editorTextFocus"
   },

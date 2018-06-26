@@ -17,9 +17,15 @@
 		"description": "replaces $square_brackets with []"
   },
 
+  "add_fat_arrow": {
+		"prefix": "$add_fat_arrow",
+		"body": " => $0",
+		"description": "adds fat arrow `"
+  },
+
   "wrap_in_backtick": {
 		"prefix": "$wrap_in_backtick",
-		"body": "`${TM_SELECTED_TEXT}`$0",
+		"body": "`${TM_SELECTED_TEXT}$0`",
 		"description": "Wraps selected text in `"
   }
 }
