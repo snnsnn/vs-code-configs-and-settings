@@ -51,6 +51,7 @@
   "editor.snippetSuggestions": "top",
   "editor.tabSize": 2,
   "php.validate.executablePath": "C:/MAMP/bin/php/php7.1.7/php.exe",
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
   "update.channel": "none",
   "window.zoomLevel": 0,
   "workbench.statusBar.visible": true,
