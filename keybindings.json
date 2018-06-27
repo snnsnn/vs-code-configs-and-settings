@@ -87,6 +87,10 @@
     "command": "selectPrevSuggestion",
     "when": "editorTextFocus && suggestWidgetVisible"
   },
+  { "key": "ctrl+n",
+    "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
   {
     "key": "ctrl+shift+n",
     "command": "cursorUpSelect",
@@ -121,6 +125,10 @@
     "key": "ctrl+b",
     "command": "selectNextSuggestion",
     "when": "editorTextFocus && suggestWidgetVisible"
+  },
+  { "key": "ctrl+b",
+    "command": "workbench.action.quickOpenNavigateNextInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
   },
   {
     "key": "ctrl+shift+b",
