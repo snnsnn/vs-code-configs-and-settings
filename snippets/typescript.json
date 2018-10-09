@@ -1,0 +1,31 @@
+{
+  "describe": {
+    "prefix": "des",
+    "body": [
+      "describe(`$1`, () => {",
+      "\t$0",
+      "});"
+    ],
+    "description": "Adds describe function for testing"
+  },
+  "describe & test": {
+    "prefix": "des",
+    "body": [
+      "describe(`$1`, () => {",
+      "\ttest(`$2`, () => {",
+      "\t\texpect($3)$0",
+      "\t});",
+      "});"
+    ],
+    "description": "Adds describe function for testing"
+  },
+  "test": {
+    "prefix": "test",
+    "body": [
+      "test(`$1`, () => {",
+      "\texpect($2)$0",
+      "});"
+    ],
+    "description": "Adds describe function for testing"
+  }
+}

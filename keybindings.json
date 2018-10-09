@@ -159,5 +159,24 @@
     "key": "ctrl+[KeyB]",
     "command": "editor.action.commentLine",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+g",
+    "command": "workbench.view.extension.favorites-explorer",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+f",
+    "command": "-workbench.view.extension.favorites-explorer",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "-code-runner.runByLanguage"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "-bookmarks.jumpToPrevious",
+    "when": "editorTextFocus"
   }
 ]
