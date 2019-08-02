@@ -10,7 +10,10 @@
   },
   "files.watcherExclude": {
     "**/.git": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
     "**/node_modules": true,
+    "**/node_modules/*/**": true,
     "**/tmp/**": true
   },
   "[markdown]": {
@@ -24,7 +27,6 @@
       "activityBar.background": "#000",
       "dropdown.background": "#000",
       "editor.background": "#000",
-      "editorGroup.background": "#ff0000",
       "editorGroupHeader.tabsBackground": "#000",
       "input.background": "#000",
       "panel.background": "#000",
@@ -55,8 +57,6 @@
       "dropdown.background": "#13181d",
       "dropdown.foreground": "#475259",
       "dropdown.border": "#20272c",
-      "list.focusAndSelectionBackground": "#060d13",
-      "list.focusAndSelectionForeground": "#bfbab0",
       "list.activeSelectionBackground": "#060d13",
       "list.activeSelectionForeground": "#bfbab0",
       "list.inactiveSelectionBackground": "#060d13",
@@ -90,7 +90,6 @@
       "editor.findRangeHighlightBorder": "#00000000",
       "editor.findRangeHighlightBackground": "#131e27",
       "editorLink.activeForeground": "#f29718",
-      "editorLink.foreground": "#f29718",
       "editorWidget.background": "#13181d",
       "editor.lineHighlightBackground": "#070d14",
       "editor.rangeHighlightBackground": "#070d14",
@@ -120,7 +119,7 @@
       "editorOverviewRuler.errorForeground": "#ff3333",
       "editorSuggestWidget.background": "#13181d",
       "editorSuggestWidget.border": "#000000",
-      "editorSuggestWidget.selectedBackground": "#060d13",
+      "editorSuggestWidget.selectedBackground": "#ff333334",
       "editorSuggestWidget.highlightForeground": "#f29718",
       "peekView.border": "#060d13",
       "peekViewEditor.background": "#13181d",
@@ -133,7 +132,6 @@
       "peekViewResult.fileForeground": "#475259",
       "diffEditor.insertedTextBackground": "#c2d94c25",
       "diffEditor.removedTextBackground": "#f2966825",
-      "editorGroup.background": "#13181d",
       "editorGroup.border": "#060d13",
       "editorGroupHeader.tabsBackground": "#000000",
       "editorGroupHeader.noTabsBackground": "#000000",
@@ -175,13 +173,9 @@
       "titleBar.inactiveForeground": "#475259",
       "titleBar.activeBackground": "#000000",
       "titleBar.inactiveBackground": "#000000",
-      "notification.background": "#060d13",
       "extensionButton.prominentBackground": "#f29718",
       "extensionButton.prominentHoverBackground": "#ec9210",
       "extensionButton.prominentForeground": "#000000",
-      "welcomePage.quickLinkBackground": "#060d13",
-      "welcomePage.quickLinkHoverBackground": "#060d13",
-      "welcomeOverlay.foreground": "#bfbab0",
       "walkThrough.embeddedEditorBackground": "#13181d",
       "textLink.foreground": "#f29718",
       "textLink.activeForeground": "#f29718",
@@ -215,11 +209,6 @@
       "terminal.ansiBrightWhite": "#ffffff"
     }
   },
-  "code-runner.saveFileBeforeRun": true,
-  "code-runner.clearPreviousOutput": true,
-  "code-runner.runInTerminal": false,
-  "code-runner.preserveFocus": true,
-  "code-runner.showExecutionMessage": false,
   "editor.detectIndentation": false,
   "editor.fontFamily": "'Fira Code', Purisa, 'PT Mono', 'Grand Hotel', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
@@ -227,14 +216,54 @@
   "editor.fontWeight": "400",
   "editor.formatOnSave": false,
   "editor.insertSpaces": true,
-  "editor.multiCursorModifier": "alt",
-  "editor.snippetSuggestions": "top",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.stablePeek": true,
+  "editor.hover.sticky": true,
   "editor.tabSize": 2,
+  "editor.rulers": [60, 80, 120],
   "files.eol": "\n",
-  "php.validate.executablePath": "C:/MAMP/bin/php/php7.1.7/php.exe",
   "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-  "update.channel": "none",
+  "update.mode": "none",
   "window.zoomLevel": 0,
   "workbench.statusBar.visible": true,
-  "workbench.colorTheme": "One Dark Pro Vivid"
+  "bookmarks.navigateThroughAllFiles": true,
+  "workbench.colorTheme": "One Dark Pro Vivid",
+  "breadcrumbs.enabled": true,
+  "window.titleBarStyle": "custom",
+  "terminal.integrated.rendererType": "dom",
+  "phpformatter.composer": false,
+  "phpformatter.phpPath": "/usr/bin/php",
+  "phpformatter.pharPath": "${extensionPath}/php-cs-fixer.phar",
+  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+  "php-cs-fixer.lastDownload": 1564559309505,
+  "prettier.singleQuote": true,
+  "editor.minimap.maxColumn": 80,
+  "prettier.trailingComma": "all",
+  "php.suggest.basic": false,
+  "php.validate.run": "onType",
+"php-cs-fixer.autoFixBySemicolon": true,
+"[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+},
+"[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[html]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+},
+"html.format.enable": false,
+"prettier.tslintIntegration": true,
+"[rust]": {},
+"[jsonc]": {
+  "editor.defaultFormatter": "vscode.json-language-features"
+}
 }

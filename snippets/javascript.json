@@ -1,41 +1,33 @@
 {
-  "Print to console": {
-    "prefix": "log",
+  "Responsive Media Queries": {
+    "prefix": "rmq",
     "body": [
-      "console.log($1);$0"
+      "\/* start of desktop styles */\n",
+      "@media screen and (max-width: 991px) {",
+      "\t/* start of large tablet styles */\n}",
+      "@media screen and (max-width: 767px) {",
+      "\t/* start of medium tablet styles */\n}",
+      "@media screen and (max-width: 479px) {",
+      "\t/* start of  phone styles */\n}",
+      "@media screen and (max-width: 319px) {",
+      "\t/* start of minimum viewport & old mobile phones */\n}"
     ],
-    "description": "Log output to console"
+    "description": ""
   },
-  "Function expression": {
-    "prefix": "fn",
+  "Global Styled Jsx": {
+    "prefix": "gjsx",
     "body": [
-      "let ${1:name} = function($2){",
-      "  $3",
-      "};",
-      "$0",
+      "<style jsx global>{`\n\t$1",
+      "`}</style>$0",
     ],
-    "description": "Anonymous function expression"
+    "description": "Adds global styled jsx snippet"
   },
-  "Empty function statement": {
-    "prefix": "func",
+  "Styled Jsx": {
+    "prefix": "jsx",
     "body": [
-      "function($2){",
-      "  $3",
-      "}$0",
+      "<style jsx>{`\n\t$1",
+      "`}</style>$0",
     ],
-    "description": "Empty function statement"
-  },
-  "New JS Functional Component": {
-    "prefix": "fcx",
-    "body": [
-      "import react from 'react';\n",
-      "export default (props) => (",
-      "  <${1:name}>\n",
-      "  <style jsx>{`\n",
-      "  `}</style>",
-      "  </${1:name}>",
-      ");$0"
-    ],
-    "description": "Adds New Functional Next Component "
+    "description": "Adds styled jsx snippet"
   }
 }

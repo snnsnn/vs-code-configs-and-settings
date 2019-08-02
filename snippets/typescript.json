@@ -1,31 +1,28 @@
 {
-  "describe": {
-    "prefix": "des",
-    "body": [
-      "describe(`$1`, () => {",
-      "\t$0",
-      "});"
-    ],
-    "description": "Adds describe function for testing"
-  },
-  "describe & test": {
-    "prefix": "des",
-    "body": [
-      "describe(`$1`, () => {",
-      "\ttest(`$2`, () => {",
-      "\t\texpect($3)$0",
-      "\t});",
-      "});"
-    ],
-    "description": "Adds describe function for testing"
-  },
-  "test": {
-    "prefix": "test",
-    "body": [
-      "test(`$1`, () => {",
-      "\texpect($2)$0",
-      "});"
-    ],
-    "description": "Adds describe function for testing"
-  }
+	// Place your snippets for typescript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+  // }
+
+
+  "Block Library Template": {
+		"prefix": "bl",
+		"body": [
+			"export type ${TM_SELECTED_TEXT/(.*)/${1:/capitalize}/}Attributes = {\n\t$0\n};\n",
+      "export type ${TM_SELECTED_TEXT/(.*)/${1:/upcase}/}_TEMPLATE = [",
+      "  'core/${TM_SELECTED_TEXT/(.*)/${1:/downcase}/}',",
+      "    ${TM_SELECTED_TEXT/(.*)/${1:/capitalize}/}Attributes",
+      "];\n"
+		],
+		"description": "Block Library Template Inseter"
+	}
 }

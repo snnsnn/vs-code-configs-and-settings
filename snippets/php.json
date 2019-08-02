@@ -1,0 +1,164 @@
+{
+  "instance method": {
+    "prefix": "fun",
+    "body": [
+      "${1|public,protected,private|} function ${2:name}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Add instance method"
+  },
+  "static method": {
+    "prefix": "fun",
+    "body": [
+      "${1|public,protected,private|} static function ${2:name}()",
+      "{",
+      "\t$0",
+      "}"
+    ],
+    "description": "Add static method"
+  },
+  "HtmlElement": {
+    "prefix": "component",
+    "body": [
+      "declare(strict_types=1);",
+      "namespace Peregrine\\Components${1:${TM_DIRECTORY/.*\\/(.+?)$/${1:}/}};\n",
+      "use Windwalker\\Dom\\HtmlElement;\n",
+      "class ${TM_FILENAME_BASE} extends HtmlElement",
+      "{",
+      "\tprotected $$name    = 'div';",
+      "\tprotected $$attribs = [${2:'class' => ''}];\n",
+      "\tpublic function __construct($$arguments = [])",
+      "\t{",
+      "\t\t$$this->attribs  = array_merge($$this->attribs, $$arguments);",
+      "\t\t$$this->content  = ''$3;",
+      "\t\tparent::__construct($$this->name, $$this->content, $$this->attribs);",
+      "\t}",
+      "}"
+    ],
+    "description": "HtmlElement Component"
+  },
+  "HtmlElement_with_attributes_getter": {
+    "prefix": "component",
+    "body": [
+      "declare(strict_types=1);",
+      "namespace Peregrine\\Components${1:${TM_DIRECTORY/.*\\/(.+?)$/${1:}/}};\n",
+      "use Windwalker\\Dom\\HtmlElement;\n",
+      "class ${TM_FILENAME_BASE} extends HtmlElement",
+      "{",
+      "\tprotected $$name    = 'div';",
+      "\tprotected $$attribs = [${2:'class' => ''}];\n",
+      "\tpublic function __construct($$arguments = [])",
+      "\t{",
+      "\t\t$$this->attribs  = array_merge($$this->attribs, $$arguments);",
+      "\t\t$$this->content  = ''$3;",
+      "\t\tparent::__construct($$this->name, $$this->content, $$this->getAttributes());",
+      "\t}",
+      "\tpublic function getAttributes()",
+      "\t{\n\t\n\t}\n",
+      "}"
+    ],
+    "description": "HtmlElement Component with\n\ngetAttributes()\n\n"
+  },
+  "HtmlElement_with_content_getter": {
+    "prefix": "component",
+    "body": [
+      "declare(strict_types=1);",
+      "namespace Peregrine\\Components${1:${TM_DIRECTORY/.*\\/(.+?)$/${1:}/}};\n",
+      "use Windwalker\\Dom\\HtmlElement;\n",
+      "class ${TM_FILENAME_BASE} extends HtmlElement",
+      "{",
+      "\tprotected $$name    = 'div';",
+      "\tprotected $$attribs = [${3:'class' => ''}];\n",
+      "\tpublic function __construct($$arguments = [])",
+      "\t{",
+      "\t\t\t$$this->attribs = array_merge($$this->attribs, $$arguments);",
+      "\t\t\tparent::__construct($$this->name, $$this->getContent(), $$this->attribs);",
+      "\t}",
+      "\tpublic function getContent()",
+      "\t{\n\t\n\t}\n",
+      "}"
+    ],
+    "description": "HtmlElement Component with\n\ngetContent()\n\n"
+  },
+  "HtmlElement with args and content getter": {
+    "prefix": "component",
+    "body": [
+      "declare(strict_types=1);",
+      "namespace Peregrine\\Components${1:${TM_DIRECTORY/.*\\/(.+?)$/${1:}/}};\n",
+      "use Windwalker\\Dom\\HtmlElement;\n",
+      "class ${TM_FILENAME_BASE} extends HtmlElement",
+      "{",
+      "\tprotected $$name    = 'div';",
+      "\tprotected $$attribs = [${2:'class' => ''}];\n",
+      "\tpublic function __construct($$arguments = [])",
+      "\t{",
+      "\t\tforeach ($$arguments as $$key => $$value) {",
+      "\t\t\tif ($$key === '$3' && isset($$value)) {",
+      "\t\t\t\t$$this->$3 = $$value;",
+      "\t\t\t} else {",
+      "\t\t\t\t$$this->attribs = array_merge($$this->attribs, [$$key => $$value]);",
+      "\t\t\t}",
+      "\t\t}",
+      "\t\tparent::__construct($$this->name, $$this->getContent(), $$this->attribs);",
+      "\t}",
+      "\tpublic function getContent()",
+      "\t{\n\t\n\t}\n",
+      "}"
+    ],
+    "description": "HtmlElement Component with\n\n$key=>$value arguments\ngetContent()\n\n"
+  },
+  "HtmlElement_with_getters": {
+    "prefix": "component",
+    "body": [
+      "declare(strict_types=1);",
+      "namespace Peregrine\\Components${1:${TM_DIRECTORY/.*\\/(.+?)$/${1:}/}};\n",
+      "use Windwalker\\Dom\\HtmlElement;\n",
+      "class ${TM_FILENAME_BASE} extends HtmlElement",
+      "{",
+      "\tprotected $$name    = 'div';",
+      "\tprotected $$attribs = [${3:'class' => ''}];\n",
+      "\tpublic function __construct($$arguments = [])",
+      "\t{",
+      "\t\t$$this->attribs = array_merge($$this->attribs, $$arguments);",
+      "\t\tparent::__construct($$this->name, $$this->getContent(), $$this->getAttributes());",
+      "\t}\n",
+      "\tpublic function getAttributes()",
+      "\t{\n\t\n\t}\n",
+      "\tpublic function getContent()",
+      "\t{\n\t\n\t}\n",
+      "}"
+    ],
+    "description": "HtmlElement Component with\n\ngetContent()\ngetAttributes()\n\n"
+  },
+  "HtmlElement with args and getters": {
+    "prefix": "component",
+    "body": [
+      "declare(strict_types=1);",
+      "namespace Peregrine\\Components${1:${TM_DIRECTORY/.*\\/(.+?)$/${1:}/}};\n",
+      "use Windwalker\\Dom\\HtmlElement;\n",
+      "class ${TM_FILENAME_BASE} extends HtmlElement",
+      "{",
+      "\tprotected $$name    = 'div';",
+      "\tprotected $$attribs = [${2:'class' => ''}];\n",
+      "\tpublic function __construct($$arguments = [])",
+      "\t{",
+      "\t\tforeach ($$arguments as $$key => $$value) {",
+      "\t\t\tif ($$key === '$3' && isset($$value)) {",
+      "\t\t\t\t$$this->$3 = $$value;",
+      "\t\t\t} else {",
+      "\t\t\t\t$$this->attribs = array_merge($$this->attribs, [$$key => $$value]);",
+      "\t\t\t}",
+      "\t\t}",
+      "\t\tparent::__construct($$this->name, $$this->getContent(), $$this->getAttributes());",
+      "\t}",
+      "\tpublic function getAttributes()",
+      "\t{\n\t\n\t}\n",
+      "\tpublic function getContent()",
+      "\t{\n\t\n\t}\n",
+      "}"
+    ],
+    "description": "HtmlElement Component with\n\n$key=>$value,\ngetContent()\ngetAttributes()\n\n"
+  }
+}

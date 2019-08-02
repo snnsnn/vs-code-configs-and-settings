@@ -1,4 +1,5 @@
 // Place your key bindings in this file to overwrite the defaults
+// https://code.visualstudio.com/docs/getstarted/keybindings
 [
   {
     "key": "ctrl+[Backquote]",
@@ -11,42 +12,35 @@
   },
   {
     "key": "ctrl+space",
-    "command": "insertSnippet",
-    "when": "suggestWidgetVisible"
+    "command": "acceptSelectedSuggestion",
+    "when": "suggestWidgetVisible && textInputFocus"
   },
   {
-    "key": "ctrl+alt+down",
-    "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+alt+up",
-    "command": "editor.action.deleteLines",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+enter",
-    "command": "code-runner.run"
-  },
-  {
-    "key": "ctrl+backspace",
-    "command": "deleteRight",
+    "key": "ctrl+7",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "name": "wrap_in_backtick"
+    },
     "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+alt+enter",
-    "command": "code-runner.stop"
   },
   {
     "key": "ctrl+0",
     "command": "editor.action.insertSnippet",
     "args": {
-      "name": "add_fat_arrow"
+      "name": "add_fat_arrow_function"
     },
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+k",
+    "key": "ctrl+-",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "name": "add_arrow_function"
+    },
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+m",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "add_paranthesis"
@@ -54,7 +48,7 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+m",
+    "key": "ctrl+shift+m",
     "command": "editor.action.insertSnippet",
     "args": {
       "name": "add_curly_brackets"
@@ -70,113 +64,273 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+7",
+    "key": "ctrl+9",
     "command": "editor.action.insertSnippet",
     "args": {
-      "name": "wrap_in_backtick"
+      "name": "add_square_brackets"
     },
     "when": "editorTextFocus"
   },
   {
+    "key": "ctrl+t",
+    "command": "cursorWordStartLeft",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "cursorWordEndRight",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "jumpToNextSnippetPlaceholder",
+    "when": "editorTextFocus && hasNextTabstop && inSnippetMode"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "cursorUpSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "cursorRightSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "cursorDownSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "cursorLeftSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "cursorWordLeftSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+y",
+    "command": "cursorWordRightSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+backspace",
+    "command": "deleteRight",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+backspace",
+    "command": "deleteWordLeft",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+backspace",
+    "command": "deleteWordRight",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "cursorDown",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "workbench.action.quickOpenNavigateNextInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "settings.action.focusSettingsFile",
+    "when": "inSettingsSearch && !suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "showNextParameterHint",
+    "when": "editorTextFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "breadcrumbs.selectFocused",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "history.showNext",
+    "when": "historyNavigationEnabled && historyNavigationWidget"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "keybindings.editor.focusKeybindings",
+    "when": "inKeybindings && inKeybindingsSearch"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "list.focusDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "notifications.focusNextToast",
+    "when": "notificationFocus && notificationToastsVisible"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "outline.focus",
+    "when": "outlineFiltered && outlineFocused"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "workbench.action.interactivePlayground.arrowDown",
+    "when": "interactivePlaygroundFocus && !editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+b",
+    "command": "editor.action.insertCursorBelow",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+b",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "textInputFocus"
+  },
+  {
     "key": "ctrl+n",
     "command": "cursorUp",
-    "when": "editorTextFocus"
+    "when": "textInputFocus"
   },
   {
     "key": "ctrl+n",
     "command": "selectPrevSuggestion",
     "when": "editorTextFocus && suggestWidgetVisible"
   },
-  { "key": "ctrl+n",
+  {
+    "key": "ctrl+n",
     "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
     "when": "inFilesPicker && inQuickOpen"
   },
   {
-    "key": "ctrl+shift+n",
-    "command": "cursorUpSelect",
-    "when": "editorTextFocus"
+    "key": "ctrl+n",
+    "command": "showPrevParameterHint",
+    "when": "editorTextFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "history.showPrevious",
+    "when": "historyNavigationEnabled && historyNavigationWidget"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "list.focusUp",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "notifications.focusPreviousToast",
+    "when": "notificationFocus && notificationToastsVisible"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "outline.focus",
+    "when": "outlineFiltered && outlineFocused"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.interactivePlayground.arrowUp",
+    "when": "interactivePlaygroundFocus && !editorTextFocus"
   },
   {
     "key": "ctrl+alt+n",
-    "command": "cursorColumnSelectUp",
-    "when": "editorTextFocus"
+    "command": "editor.action.insertCursorAbove",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+n",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "textInputFocus"
   },
   {
     "key": "ctrl+l",
     "command": "cursorRight",
-    "when": "editorTextFocus"
+    "when": "textInputFocus"
   },
   {
-    "key": "ctrl+shift+l",
-    "command": "cursorRightSelect",
-    "when": "editorTextFocus"
+    "key": "ctrl+l",
+    "command": "cursorRight",
+    "when": "editorTextFocus && hasNextTabstop && inSnippetMode"
   },
   {
-    "key": "ctrl+alt+l",
-    "command": "cursorLineEnd",
-    "when": "editorTextFocus"
+    "key": "ctrl+l",
+    "command": "repl.action.acceptSuggestion",
+    "when": "inDebugRepl && suggestWidgetVisible && textInputFocus"
   },
   {
-    "key": "ctrl+b",
-    "command": "cursorDown",
-    "when": "editorTextFocus"
+    "key": "ctrl+l",
+    "command": "breadcrumbs.focusNext",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
   },
   {
-    "key": "ctrl+b",
-    "command": "selectNextSuggestion",
-    "when": "editorTextFocus && suggestWidgetVisible"
-  },
-  { "key": "ctrl+b",
-    "command": "workbench.action.quickOpenNavigateNextInFilePicker",
-    "when": "inFilesPicker && inQuickOpen"
+    "key": "ctrl+l",
+    "command": "list.expand",
+    "when": "listFocus && !inputFocus"
   },
   {
-    "key": "ctrl+shift+b",
-    "command": "cursorDownSelect",
-    "when": "editorTextFocus"
+    "key": "ctrl+l",
+    "command": "notification.expand",
+    "when": "notificationFocus"
   },
   {
-    "key": "ctrl+alt+b",
-    "command": "cursorColumnSelectDown",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+t",
+    "key": "ctrl+k",
     "command": "cursorLeft",
-    "when": "editorTextFocus"
+    "when": "textInputFocus"
   },
   {
-    "key": "ctrl+shift+t",
-    "command": "cursorLeftSelect",
-    "when": "editorTextFocus"
+    "key": "ctrl+k",
+    "command": "breadcrumbs.focusPrevious",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
   },
   {
-    "key": "ctrl+alt+t",
-    "command": "cursorLineStart",
-    "when": "editorTextFocus"
+    "key": "ctrl+k",
+    "command": "list.collapse",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "notification.collapse",
+    "when": "notificationFocus"
   },
   {
     "key": "ctrl+[KeyB]",
     "command": "editor.action.commentLine",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+alt+g",
-    "command": "workbench.view.extension.favorites-explorer",
-    "when": "editorTextFocus"
+    "key": "ctrl+/",
+    "command": "-editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+alt+f",
-    "command": "-workbench.view.extension.favorites-explorer",
-    "when": "editorTextFocus"
+    "key": "ctrl+q",
+    "command": "-workbench.action.quit"
   },
   {
-    "key": "ctrl+alt+j",
-    "command": "-code-runner.runByLanguage"
+    "key": "ctrl+8",
+    "command": "-workbench.action.focusEighthEditorGroup"
   },
   {
-    "key": "ctrl+alt+j",
-    "command": "-bookmarks.jumpToPrevious",
-    "when": "editorTextFocus"
-  }
+    "key": "ctrl+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
 ]

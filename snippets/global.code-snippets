@@ -1,0 +1,44 @@
+{
+	"add_paranthesis": {
+		"prefix": "mm",
+		"body": "(${TM_SELECTED_TEXT}$1)$0",
+		"description": "replaces $paranthesis with ()"
+  },
+  "add_paranthesis_with_space": {
+		"prefix": "mm",
+		"body": "(${TM_SELECTED_TEXT}$1) $0 ",
+		"description": "replaces $paranthesis with ()"
+	},
+	"add_curly_brackets": {
+		"prefix": "mmm",
+		"body": "{${TM_SELECTED_TEXT}$0}",
+		"description": "replaces $curly_brackets with {}"
+	},
+	"add_square_brackets": {
+		"prefix": "$square_brackets",
+		"body": "[${TM_SELECTED_TEXT}$0]",
+		"description": "replaces $square_brackets with []"
+	},
+	"add_arrow_function": {
+		"prefix": "$add_arrow_function",
+		"body": " -> $0",
+		"description": "adds arrow `"
+	},
+	"add_fat_arrow_function": {
+		"prefix": "$add_arrow_function",
+		"body": " => $0",
+		"description": "adds fat arrow `"
+	},
+	"wrap_in_backtick": {
+		"prefix": "$wrap_in_backtick",
+		"body": "`${TM_SELECTED_TEXT}$0`",
+		"description": "Wraps selected text in `"
+  },
+  "Print to console": {
+		"prefix": "iffy",
+		"body": [
+			"(function ($2) {\n\t$0\n}($1));"
+		],
+		"description": "IFFY"
+	}
+}
