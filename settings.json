@@ -16,25 +16,43 @@
     "**/node_modules/*/**": true,
     "**/tmp/**": true
   },
-  "[markdown]": {
-    "editor.quickSuggestions": true,
-    "editor.wordWrap": "on"
-  },
-  "workbench.sideBar.location": "left",
-  "workbench.activityBar.visible": true,
   "workbench.colorCustomizations": {
-    "[Monokai]": {
+    // Convert any theme into pitch black background without touching rest of the color scheme
+    "[Noctis]": {
       "activityBar.background": "#000",
+      "breadcrumb.background": "#000",
       "dropdown.background": "#000",
       "editor.background": "#000",
+      "editorError.border": "#000",
       "editorGroupHeader.tabsBackground": "#000",
+      "editorGutter.background": "#000",
+      "editorInfo.border": "#000",
+      "editorWarning.border": "#000",
       "input.background": "#000",
       "panel.background": "#000",
-      "statusBar.background": "#000",
+      "panel.border": "#000",
       "sideBar.background": "#000",
+      "sideBar.border": "#000",
+      "sideBarSectionHeader.border": "#000",
+      "sideBarSectionHeader.background": "#000",
+      "statusBar.background": "#000",
+      "statusBar.border": "#000",
+      "tab.activeBackground": "#000",
+      "tab.activeBorder": "#000",
+      "tab.border": "#000",
       "tab.inactiveBackground": "#000",
-      "tab.activeBackground": "#303030",
-      "titleBar.activeBackground": "#000"
+      "terminal.background": "#000",
+      "titleBar.activeBackground": "#000",
+      // Rulers with reduced opacity
+      "editorRuler.foreground": "#29484c33",
+      // Borderlines around editing area
+      "editorGroupHeader.tabsBorder": "#000",
+      "titleBar.border": "#000",
+      "activityBar.border": "#000",
+      // Some disabled shit for later use
+      // "editorSuggestWidget.border": "#000",
+      // "editorSuggestWidget.background": "#000",
+      // "editorHoverWidget.background": "#000",
     },
     "[One Dark Pro Vivid]": {
       "foreground": "#6a7175",
@@ -108,6 +126,7 @@
       "editorRuler.foreground": "#060d13",
       "editorError.foreground": "#ff3333",
       "editorWarning.foreground": "#f29718",
+      "editorGutter.background": "#000",
       "editorGutter.modifiedBackground": "#39bae6",
       "editorGutter.addedBackground": "#c2d94c",
       "editorGutter.deletedBackground": "#f29668",
@@ -209,61 +228,80 @@
       "terminal.ansiBrightWhite": "#ffffff"
     }
   },
+  "breadcrumbs.enabled": true,
   "editor.detectIndentation": false,
-  "editor.fontFamily": "'Fira Code', Purisa, 'PT Mono', 'Grand Hotel', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontFamily": "Inconsolata, 'Fira Code', Purisa, 'PT Mono', 'Grand Hotel', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
   "editor.fontWeight": "400",
   "editor.formatOnSave": false,
+  "editor.highlightActiveIndentGuide": false,
+  "editor.hover.sticky": true,
   "editor.insertSpaces": true,
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.stablePeek": true,
-  "editor.hover.sticky": true,
-  "editor.tabSize": 2,
+  "editor.renderIndentGuides": false,
   "editor.rulers": [60, 80, 120],
+  "editor.minimap.maxColumn": 80,
+  "editor.stablePeek": true,
+  "editor.tabSize": 2,
   "files.eol": "\n",
+  "terminal.integrated.rendererType": "dom",
   "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
   "update.mode": "none",
-  "window.zoomLevel": 0,
-  "workbench.statusBar.visible": true,
-  "bookmarks.navigateThroughAllFiles": true,
-  "workbench.colorTheme": "One Dark Pro Vivid",
-  "breadcrumbs.enabled": true,
   "window.titleBarStyle": "custom",
-  "terminal.integrated.rendererType": "dom",
-  "phpformatter.composer": false,
-  "phpformatter.phpPath": "/usr/bin/php",
-  "phpformatter.pharPath": "${extensionPath}/php-cs-fixer.phar",
+  "window.zoomLevel": 0,
+  "workbench.activityBar.visible": true,
+  "workbench.colorTheme": "Noctis",
+  "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+  "workbench.sideBar.location": "left",
+  "workbench.statusBar.visible": true,
+  "workbench.tree.renderIndentGuides": "none",
+  "bookmarks.navigateThroughAllFiles": true,
+  "php-cs-fixer.autoFixBySemicolon": true,
   "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-  "php-cs-fixer.lastDownload": 1564559309505,
-  "prettier.singleQuote": true,
-  "editor.minimap.maxColumn": 80,
-  "prettier.trailingComma": "all",
+  "php-cs-fixer.lastDownload": 1568180343469,
   "php.suggest.basic": false,
   "php.validate.run": "onType",
-"php-cs-fixer.autoFixBySemicolon": true,
-"[typescriptreact]": {
+  "phpformatter.composer": false,
+  "phpformatter.pharPath": "${extensionPath}/php-cs-fixer.phar",
+  "phpformatter.phpPath": "/usr/bin/php",
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.tslintIntegration": true,
+  "[markdown]": {
+    "editor.quickSuggestions": true,
+    "editor.wordWrap": "on"
+  },
+  "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"[php]": {
-    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-},
-"[typescript]": {
+  },
+  "[php]": {
+    "editor.defaultFormatter": "Sophisticode.php-formatter"
+  },
+  "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"[html]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"[javascript]": {
+  },
+  "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"[json]": {
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-},
-"html.format.enable": false,
-"prettier.tslintIntegration": true,
-"[rust]": {},
-"[jsonc]": {
-  "editor.defaultFormatter": "vscode.json-language-features"
-}
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[yaml]": {},
+  "[proto3]": {},
+  "rust.unstable_features": true,
+  "rust.all_features": true,
+  "rust-client.disableRustup": true,
+  "rust-client.revealOutputChannelOn": "error",
+  "rust.build_on_save": true,
+  "files.associations": {
+    "*.go": "go",
+    "*.proto": "proto3"
+  }
 }

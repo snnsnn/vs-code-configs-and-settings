@@ -40,5 +40,15 @@
 			"(function ($2) {\n\t$0\n}($1));"
 		],
 		"description": "IFFY"
-	}
+  },
+  "License": {
+    "prefix": "license",
+    "body": [
+      "// Copyright (C) AdSafe - All Rights Reserved",
+      "// Unauthorized copying of this file, via any medium is strictly prohibited",
+      "// Proprietary and confidential",
+      "// Written by Sinan Polat <sinan38tr@gmail.com>, August 2019$0"
+    ],
+    "description": "Add propreitary license"
+  }
 }
